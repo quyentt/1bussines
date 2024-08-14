@@ -1,0 +1,1862 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1Business.vn Nền tảng Quản trị Doanh nghiệp toàn diện</title>
+    <link rel="shortcut icon" type="image/png" href="assets/images/CADSFLAG.ICO">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="assets/js/smtp.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "sender@email_address.com",
+                    Password: "Enter your password",
+                    To: 'receiver@email_address.com',
+                    From: "sender@email_address.com",
+                    Subject: "Sending Email using javascript",
+                    Body: "Well that was easy!!",
+                })
+                .then(function(message) {
+                    alert("mail sent successfully")
+                });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header sticky-top">
+        <div class="container-cads">
+            <div class="header-content">
+                <div class="logo-head">
+                    <a href="index.html">
+                        <img src="assets/images/1business.png" alt="Logo" style="width:250px">
+                    </a>
+                </div>
+                <div class="menu-group">
+                    <div class="on-mobi">
+                        <a href="index.html">
+                            <img src="assets/images/1business.png" alt="Logo" style="width:250px">
+                        </a>
+                        <i class="fa-light fa-times menu-mobi-close"></i>
+                    </div>
+                    <ul class="main-menu">
+                        <li class="menu-item">
+                            <div class="menu-item-label">
+                                <a href="https://cads.com.vn" target="_blank">Trang chủ</a>
+                                <i class="fa-light fa-chevron-down child-menu-toggle"></i>
+                            </div>
+                        </li>
+                        <!--<li class="menu-item">
+							<div class="menu-item-label">
+								<a href="">Sản phẩm</a>
+								<i class="fa-light fa-chevron-down child-menu-toggle"></i>
+							</div>
+							<div class="child-menu child-menu-full">
+								<div class="container-cads">
+									<div class="child-menu-list">
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/cong-viec.svg" alt="cong-viec">
+												</div>
+												<div class="meta">
+													<div class="title">Công việc</div>
+													<div class="desc">Quản lý công việc, dự án, hồ sơ pháp lý, Đánh giá KPI</div>
+												</div>
+											</a>
+										</div>
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/cong-van.svg" alt="cong-van">
+												</div>
+												<div class="meta">
+													<div class="title">Công văn</div>
+													<div class="desc">Quản lý công văn đi, công văn đến</div>
+												</div>
+											</a>
+										</div>
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/quy-trinh-noi-bo.svg" alt="quy-trinh-noi-bo">
+												</div>
+												<div class="meta">
+													<div class="title">Quy trình nội bộ</div>
+													<div class="desc">Số hoá quy trình thanh toán, văn bản nội bộ</div>
+												</div>
+											</a>
+										</div>
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/hop-dong-dien-tu.svg" alt="Hop-dong-dien-tu">
+												</div>
+												<div class="meta">
+													<div class="title">Hợp đồng điện tử</div>
+													<div class="desc">Quản lý hợp đồng, Quy trình tạo hồ sơ và trình ký số điện tử</div>
+												</div>
+											</a>
+										</div>
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/khach-hang.svg" alt="Khach-hang">
+												</div>
+												<div class="meta">
+													<div class="title">Khách hàng</div>
+													<div class="desc">Hồ sơ khách hàng, giao dịch chăm sóc khách hàng</div>
+												</div>
+											</a>
+										</div>
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/nhan-su.svg" alt="Nhan-su">
+												</div>
+												<div class="meta">
+													<div class="title">Nhân sự</div>
+													<div class="desc">Nhân sự, Chấm công, Tính lương, Lịch làm việc, Nghỉ phép online</div>
+												</div>
+											</a>
+										</div>
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/quan-ly-thiet-bi.svg" alt="quan-ly-thiet-bi">
+												</div>
+												<div class="meta">
+													<div class="title">Quản lý thiết bị</div>
+													<div class="desc">Thiết bị, bảo trì, sửa chữa, nhật trình, điều chuyển theo công trình, dự án, gói thầu</div>
+												</div>
+											</a>
+										</div>
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/vat-tu-nhien-lieu.svg" alt="Vat-tu-nhien-lieu">
+												</div>
+												<div class="meta">
+													<div class="title">Vật tư nhiên liệu</div>
+													<div class="desc">Quản lý nhập, xuất, tồn kho vật tư nhiên liệu theo công trình, dự án, gói thầu</div>
+												</div>
+											</a>
+										</div>
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/ke-toan.svg" alt="Ke-toan">
+												</div>
+												<div class="meta">
+													<div class="title">Kế toán</div>
+													<div class="desc">Tiền mặt, Tiền gửi, Vay, Phải thu, Phải trả, Tồn kho, Tài sản, Thuế, Giá thành…</div>
+												</div>
+											</a>
+										</div>
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/erp.svg" alt="Erp">
+												</div>
+												<div class="meta">
+													<div class="title">ERP</div>
+													<div class="desc">Kế toán, Mua hàng, Bán hàng, Kho, Tài sản, Kế hoạch SX, Giá thành, Nhân sự...</div>
+												</div>
+											</a>
+										</div>
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/app-goi-hang.svg" alt="App-goi-hang">
+												</div>
+												<div class="meta">
+													<div class="title">App gọi hàng</div>
+													<div class="desc">App cho các nhà phân phối, đại lý và tích hợp Kế toán, Bán hàng, ERP</div>
+												</div>
+											</a>
+										</div>
+										<div class="child-menu-item">
+											<a href="#">
+												<div class="icon">
+													<img src="assets/images/subsystem/app-cham-cong.svg" alt="App-cham-cong">
+												</div>
+												<div class="meta">
+													<div class="title">App chấm công</div>
+													<div class="desc">Chấm công định vị, QrCode, nhận dạng khuôn mặt, tích hợp phần mềm Nhân sự</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>-->
+                        <!--<li class="menu-item">
+							<div class="menu-item-label">
+								<a href="#">Bảng giá</a>
+								<i class="fa-light fa-chevron-down child-menu-toggle"></i>
+							</div>
+
+
+						</li>-->
+                        <li class="menu-item">
+                            <div class="menu-item-label">
+                                <a href="https://cads.com.vn/vi/chuyen-doi-so-c6" target="_blank">Tin tức</a>
+                                <i class="fa-light fa-chevron-down child-menu-toggle"></i>
+                            </div>
+                            <!--<ul class="child-menu">
+								<li>
+									<a href="https://cads.com.vn/vi/top-10-loi-ich-chuyen-doi-so-doanh-nghiep-trong-thoi-dai-40-nws140.html" target="_blank">
+										Top 10 Lợi Ích Chuyển Đổi Số
+									</a>
+								</li>
+								<li>
+									<a href="https://cads.com.vn/vi/chuyen-doi-so-la-gi-7-anh-huong-chinh-cua-chuyen-doi-so-doi-voi-doanh-nghiep-hien-dai-nws139.html"  target="_blank">
+										Chuyển đổi số là gì?
+									</a>
+								</li>
+							   <li>
+									<a href="#">
+										Link menu con ở đây
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link menu con ở đây
+									</a>
+								</li>
+							</ul>-->
+                        </li>
+                        <!--<li class="menu-item">
+							<div class="menu-item-label">
+								<a href="acb.html">Sự kiện</a>
+								<i class="fa-light fa-chevron-down child-menu-toggle"></i>
+							</div>
+							<ul class="child-menu">
+								<li>
+									<a href="#">
+										Link menu con ở đây
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link menu con ở đây
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link menu con ở đây
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link menu con ở đây
+									</a>
+								</li>
+							</ul>
+						</li>-->
+                        <li class="menu-item">
+                            <div class="menu-item-label">
+                                <a href="#register" data-bs-toggle="modal">Đăng ký</a>
+                                <i class="fa-light fa-chevron-down child-menu-toggle"></i>
+                            </div>
+
+                        </li>
+                        <li class="menu-item log-in">
+                            <div class="menu-item-label">
+                                <a href="https://app.1business.vn/" target="_blank">
+                                    <span>Đăng nhập</span>
+                                    <i class="fa-light fa-right-to-bracket"></i>
+                                </a>
+
+                            </div>
+
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="menu-mobi-toggle">
+                    <i class="fa-light fa-bars "></i>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="container-cads">
+            <div class="banner-content">
+
+                <!--<div class="banner-title-up">
+                    Nền tảng Chuyển đổi số toàn diện 1Business
+					Nền tảng Quản trị Doanh nghiệp toàn diện-->
+                <div class="banner-title-up">
+                    One Business - One Platform - One Vision
+                </div>
+                <div class="banner-title-down">
+                    Giải pháp Chuyển đổi số Thế hệ mới
+                </div>
+                <div class="banner-intro">
+                    Nền tảng phần mềm hợp nhất ERP và e-Office Giúp Doanh nghiệp Tối ưu hóa Quy trình Vận hành
+                </div>
+                <a href="#register" data-bs-toggle="modal" class="btn btn-banner">
+                    <span>Đăng ký Demo</span>
+                </a>
+                <div class="banner-image">
+                    <img src="assets/images/banner/banner-img.png" alt="banner">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="subsystem">
+        <div class="container-cads">
+            <div class="subsystem-title-up operate-title-up">
+                Chào đón bạn đến với thế hệ quản trị doanh nghiệp mới
+            </div>
+            <!--<div class="subsystem-title-down">
+                One Business - One Stop - One Vision
+            </div>-->
+            <div class="subsystem-intro">
+                Nơi mọi yếu tố của quản trị doanh nghiệp được hòa quyện trong một mục tiêu và Một tầm nhìn dài hạn mang lại sự chuyển mình mạnh mẽ đột phát trong cách điều hành doanh nghiệp của bạn
+            </div>
+
+            <!--<img src="assets/images/cads-sky/HeSinhThai_1Business.png" alt="cads skyviet" style="width:80%; height:auto; margin-top:30px;">-->
+
+            <div class="subsystem-list">
+                <div class="subsystem-item">
+                    <a href="#">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/cong-viec.svg" alt="cong-viec">
+                        </div>
+                        <div class="meta">
+                            <div class="title">Công việc</div>
+                            <div class="desc">Quản lý công việc, dự án, hồ sơ pháp lý, Đánh giá KPI</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="subsystem-item">
+                    <a href="#">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/cong-van.svg" alt="cong-van">
+                        </div>
+                        <div class="meta">
+                            <div class="title">Công văn</div>
+                            <div class="desc">Quản lý công văn đi, công văn đến</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="subsystem-item">
+                    <a href="#">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/quy-trinh-noi-bo.svg" alt="quy-trinh-noi-bo">
+                        </div>
+                        <div class="meta">
+                            <div class="title">Quy trình nội bộ</div>
+                            <div class="desc">Số hoá quy trình thanh toán, văn bản nội bộ</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="subsystem-item">
+                    <a href="#">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/hop-dong-dien-tu.svg" alt="Hop-dong-dien-tu">
+                        </div>
+                        <div class="meta">
+                            <div class="title">Hợp đồng điện tử</div>
+                            <div class="desc">Quản lý hợp đồng, Quy trình tạo hồ sơ và trình ký số điện tử</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="subsystem-item">
+                    <a href="#">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/khach-hang.svg" alt="Khach-hang">
+                        </div>
+                        <div class="meta">
+                            <div class="title">Khách hàng</div>
+                            <div class="desc">Hồ sơ khách hàng, giao dịch chăm sóc khách hàng</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="subsystem-item">
+                    <a href="#">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/nhan-su.svg" alt="Nhan-su">
+                        </div>
+                        <div class="meta">
+                            <div class="title">Nhân sự</div>
+                            <div class="desc">Nhân sự, Chấm công, Tính lương, Lịch làm việc, Nghỉ phép online</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="subsystem-item">
+                    <a href="#">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/quan-ly-thiet-bi.svg" alt="quan-ly-thiet-bi">
+                        </div>
+                        <div class="meta">
+                            <div class="title">Quản lý thiết bị</div>
+                            <div class="desc">Thiết bị, bảo trì, sửa chữa, nhật trình, điều chuyển theo công trình, dự án, gói thầu</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="subsystem-item">
+                    <a href="#">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/vat-tu-nhien-lieu.svg" alt="Vat-tu-nhien-lieu">
+                        </div>
+                        <div class="meta">
+                            <div class="title">Vật tư nhiên liệu</div>
+                            <div class="desc">Quản lý nhập, xuất, tồn kho vật tư nhiên liệu theo công trình, dự án, gói thầu</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="subsystem-item">
+                    <a href="https://cads.com.vn/vi/cads-finance-online-60-cpw13" target="_blank">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/ke-toan.svg" alt="Ke-toan">
+                        </div>
+                        <div class="meta">
+                            <div class="title">Kế toán</div>
+                            <div class="desc">Tiền mặt, Tiền gửi, Vay, Phải thu, Phải trả, Tồn kho, Tài sản, Thuế, Giá thành…</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="subsystem-item">
+                    <a href="#">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/erp.svg" alt="Erp">
+                        </div>
+                        <div class="meta">
+                            <div class="title">ERP</div>
+                            <div class="desc">Kế toán, Mua hàng, Bán hàng, Kho, Tài sản, Kế hoạch SX, Giá thành, Nhân sự...</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="subsystem-item">
+                    <a href="#">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/app-goi-hang.svg" alt="App-goi-hang">
+                        </div>
+                        <div class="meta">
+                            <div class="title">App gọi hàng</div>
+                            <div class="desc">App cho các nhà phân phối, đại lý và tích hợp Kế toán, Bán hàng, ERP</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="subsystem-item">
+                    <a href="#">
+                        <div class="icon">
+                            <img src="assets/images/subsystem/app-cham-cong.svg" alt="App-cham-cong">
+                        </div>
+                        <div class="meta">
+                            <div class="title">App chấm công</div>
+                            <div class="desc">Chấm công định vị, QrCode, nhận dạng khuôn mặt, tích hợp phần mềm Nhân sự</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <a href="#register" data-bs-toggle="modal" class="btn btn-subsys">
+                <span>Đăng ký demo</span>
+            </a>
+        </div>
+    </div>
+    <div class="cads-sky">
+        <div class="container-cads">
+            <div class="cads-sky-title-up">
+                <span style="color:#8C52FF" class="ttext-uppercase">Nền tảng độc đáo</span>
+            </div>
+            <div class="cads-sky-title-down">
+                All-In-One từ e-Office, ERP, đến Kế toán được tích hợp liền mạch
+            </div>
+            <div class="cads-sky-content">
+                <div class="cads-sky-content-left">
+                    <div class="cads-sky-content-box">
+                        <div class="title">
+                            Đột phá về tích hợp
+                        </div>
+                        <div class="desc">
+                            <!--<p>
+                        Tiết kiệm 70% thời gian vận hành doanh nghiệp nhờ vào việc lược giản quy trình chồng chéo, cắt giảm lãng phí thời gian do chờ đợi và các chi phí giấy tờ khác, doanh nghiệp sẽ tiết kiệm được rất nhiều chi phí và tăng năng lực cạnh tranh.
+                    </p>-->
+                            <p>
+                                Với 1Business, mọi rào cản giữa các bộ phận được phá bỏ, tạo nên một luồng công việc liền mạch và không ngừng nghỉ. Công nghệ đột phá này không chỉ làm mới cách thức làm việc mà còn định hình lại cả tương lai của doanh nghiệp.
+                            </p>
+                            <!--<p>
+                        Xây dựng một Hệ thống Kho dữ liệu (Data Warehouse) trên nền tảng đám mây có khả năng thống kê, phân tích và truy xuất dữ liệu tốc độ cao theo thời gian thực.
+                    </p>-->
+                        </div>
+                    </div>
+                    <div class="cads-sky-content-box">
+                        <div class="title">
+                            Thay đổi tư duy quản trị
+                        </div>
+                        <div class="desc">
+                            <p>
+                                Đón đầu xu hướng, quản lý 360 độ từ tài chính đến nhân sự, từ sản xuất đến thị trường, từ thủ công lên quy trình số - mọi thứ nằm gọn trong lòng bàn tay của bạn với 1Business
+                            </p>
+                            <!--<p>
+                     Thay đổi về tư duy và mô hình kinh doanh truyền thống sang mô hình kỹ thuật số, ứng dụng công nghệ thông tin nhằm tối ưu chi phí, nguồn lực và các lợi ích mà công nghệ mang lại cho doanh nghiệp.
+                    </p>-->
+                            <!--<p>
+                        Sử dụng 1Business.vn doanh nghiệp sẽ nhận được ba sản phẩm chính: Quy trình tác nghiệp để tạo lập quy trình làm việc chuyên nghiệp, Chương trình phần mềm hỗ trợ hoạt động hằng ngày, và Giải pháp chuyển đổi số giúp doanh nghiệp phản ứng kịp thời với sự thay
+                        đổi thị trường đưa doanh nghiệp tiến vào kỷ nguyên số 4.0.
+                    </p>-->
+                        </div>
+                        <div class="title">
+                            Dễ dàng triển khai và tùy chỉnh
+                        </div>
+                        <div class="desc">
+                            <p>
+                                Phần mềm có thể được tùy chỉnh để phù hợp với nhu cầu cụ thể của từng doanh nghiệp, từng nghành nghề.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cads-sky-content-center">
+                    <img src="assets/images/cads-sky/cads-sky-img.png" alt="cads skyviet">
+                </div>
+                <div class="cads-sky-content-right">
+                    <div class="cads-sky-content-box">
+                        <!--<div class="title">
+                    Tích hợp toàn diện
+                </div>
+                <div class="desc">
+                    <p>
+                        Dễ dàng tích hợp tất cả các ứng dụng Kế toán, ERP, Văn phòng điện tử với nhau trên một nền tảng hợp nhất, tạo ra một trải nghiệm xuyên suốt. Trong kỷ nguyên cách mạng số, 1Business.vn cùng bạn nâng cao năng lực cạnh tranh của doanh nghiệp trên tất cả mặt
+                        trận với các vũ khí công nghệ tối tân nhất. Nền tảng mở này cho phép công ty của bạn tiếp cận và áp dụng nhanh chóng các sản phẩm công nghệ tiên tiến trên thế giới từ rất nhiều công ty công nghệ hàng đầu.
+                    </p>
+                </div>-->
+                        <div class="title">
+                            Tăng tốc độ ra quyết định
+                        </div>
+                        <div class="desc">
+                            <p>
+                                Phản hồi thời gian thực và dữ liệu đa chiều từ 1Business sẽ đưa ra cái nhìn toàn cảnh, giúp các nhà lãnh đạo nắm bắt bức tranh lớn và đưa ra quyết định chớp nhoáng.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cads-sky-content-box">
+                        <div class="title">
+                            Đổi mới & Sáng tạo
+                        </div>
+                        <div class="desc">
+                            <p>
+                                Tạo môi trường làm việc chuyên nghiệp, gắn bó lâu dài, thúc đẩy đổi mới và sáng tạo. Nâng cao thương hiệu và tăng sức cạnh tranh cho doanh nghiệp trong kỷ nguyên số.
+                            </p>
+                            <div class="title">
+                                Tăng hiệu suất, Giảm chi phí
+                            </div>
+                            <div class="desc">
+                                <p>
+                                    Không còn lãng phí thời gian và nguồn lực cho việc tìm kiếm, đánh giá và tích hợp nhiều giải pháp từ nhiều nhà cung cấp. 1Business cung cấp một hệ sinh thái hoàn chỉnh, đồng bộ hóa mọi quy trình từ công việc, dự án, quản lý khách hàng, nhân sự đến tài
+                                    chính và ERP, đảm bảo kết nối thông suốt và hiệu quả tối đa.
+                                </p>
+
+                                <!--<div class="title">
+                        CEO điều hành dễ dàng
+                    </div>
+                    <div class="desc">
+                        <p>
+                            Giờ đây CEO điều hành doanh nghiệp đã trở nên dễ dàng và linh hoạt hơn bao giờ hết thông qua việc sử dụng nền tảng Quản trị Doanh nghiệp Trực tuyến 1Business. Điểm nổi bật của giải pháp này là khả năng truy cập toàn diện chỉ với các thiết bị di động như
+                            điện thoại hoặc máy tính bảng. Điều này mang lại sự tiện lợi tối đa cho các lãnh đạo, cho phép họ quản lý hoạt động kinh doanh mọi lúc, mọi nơi mà không cần phụ thuộc vào văn phòng hay thiết bị cố định. Ngoài ra, 1Business
+                            còn góp phần giảm chi phí đầu tư và vận hành, tối ưu hóa quy trình làm việc, đồng thời nâng cao hiệu quả quản lý doanh nghiệp.
+                        </p>-->
+                                <!-- <ul class="list-unstyled">
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>
+                                Tư vấn hỗ trợ xây dựng quy trình MIỄN PHÍ
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>
+                                Làm việc Online 24/7 mọi lúc, mọi nơi
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>
+                                Không phải đầu tư máy chủ server riêng
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>
+                                Không cần đội ngũ backup quản trị dữ liệu
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>
+                                Quên đi nỗi lo về chi phí nâng cấp, bảo trì
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>
+                               Bảo mật, an toàn
+                            </span>
+                        </li>
+                    </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="subsystem operate">
+        <div class="container-cads">
+            <div class="subsystem-title-up operate-title-up">
+                Vận hành xuất sắc toàn bộ doanh nghiệp
+            </div>
+            <!--<div class="subsystem-title-down">
+                One Business - One Stop - One Vision
+            </div>-->
+            <div class="subsystem-intro operate-intro">
+                Chuyển mình số hóa - Bứt phá tăng trưởng
+            </div>
+
+            <!--<img src="assets/images/cads-sky/HeSinhThai_1Business.png" alt="cads skyviet" style="width:80%; height:auto; margin-top:30px;">-->
+
+            <div class="operate-list">
+                <div class="operate-item">
+                    <div class="operate-item-wrap">
+                        <div class="operate-item-cont">
+                            <div class="operate-item-label">
+                                Tài chính
+                            </div>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Phê duyệt đề xuất thanh toán, theo dõi ngân sách</p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Quản lý hồ sơ, hoá đơn, hợp đồng, công nợ, doanh thu</p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Dashboard, Báo cáo kế toán, báo cáo tài chính</p>
+                                </li>
+                            </ul>
+                            <div class="operate-item-img">
+                                <img src="assets/images/operate/taichinh.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="operate-item">
+                    <div class="operate-item-wrap">
+                        <div class="operate-item-cont">
+                            <div class="operate-item-label">
+                                Vận Hành
+                            </div>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Quy trình phê duyệt công việc, Deadline, Workflow</p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Quản lý văn bản, công văn, kho, thiết bị, dự án</p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Quy trình mua hàng, bán hàng, xuất vật tư, kế hoạch sản xuất, tính giá thành</p>
+                                </li>
+                            </ul>
+                            <div class="operate-item-img">
+                                <img src="assets/images/operate/vanhanh.png" style="width: 218px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="operate-item">
+                    <div class="operate-item-wrap">
+                        <div class="operate-item-cont">
+                            <div class="operate-item-label">
+                                Con Người
+                            </div>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Quản lý và chăm sóc khách hàng toàn diện </p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Theo dõi tuyển dụng, đào tạo, quản lý nhân sự, chấm công, tính lương, đánh giá KPI</p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Tạo môi trường làm việc tích cực, thúc đẩy gắn kết và tinh thần làm việc nhóm</p>
+                                </li>
+                            </ul>
+                            <div class="operate-item-img">
+                                <img src="assets/images/operate/connguoi.png" style="width: 190px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="solution">
+        <div class="container-cads">
+            <div class="solution-title">
+                Giải pháp vận hành doanh nghiệp hợp nhất, toàn diện
+            </div>
+            <div class="solution-cont">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+							<div class="solution-link-cont" style="color: #8c52ff;">
+								<img src="assets/images/solution/e-office.png">
+								<span>E-Office</span>
+							</div>
+						</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+							<div class="solution-link-cont" style="color: rgb(50, 81, 219);">
+								<img src="assets/images/solution/erb.png">
+								<span>ERP</span>
+							</div>
+						</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+							<div class="solution-link-cont" style="color: rgb(216, 55, 49);">
+								<img src="assets/images/solution/finance.png">
+								<span>Finance</span>
+							</div>
+						</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="solution-tab-cont e-office">
+                            <ul class="list-unstyled ">
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p><b>1Business</b> là giải pháp E-Office (Văn phòng điện tử) thế hệ mới, gồm nhiều phân hệ quản lý: công việc, văn bản nội bộ, công văn, khách hàng, dự án, kho, thiết bị, đề nghị thanh toán, nhân sự</p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Quản lý rõ ràng, cập nhật kịp thời, liên kết dữ liệu giữa các phòng ban, hướng tới mô hình “Văn phòng không giấy”</p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Theo dõi hiệu suất hoạt động của doanh nghiệp với hệ thống các báo cáo đầy đủ, từ tổng quan tới chi tiết</p>
+                                </li>
+                            </ul>
+                            <div class="image">
+                                <img src="assets/images/solution/e-office-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="solution-tab-cont erb">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p><b>CADS ERP 6.0</b> gồm các phân hệ: Bán hàng, Mua hàng, Quản lý kho, Tài chính, Sản xuất, Bán lẻ hàng hóa mã vạch, Nhân sự, Chấm công , Tính lương, Kế toán.</p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Cung cấp dữ liệu đồng nhất với thời gian thực, cải thiện hiệu suất của từng phòng ban và nâng cao sự phối hợp, hiệu quả tổng thể của toàn bộ doanh nghiệp.</p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Cung cấp các báo cáo và phân tích chi tiết về hiệu quả hoạt động của doanh nghiệp, giúp đưa ra quyết định chiến lược chính xác và nhanh chóng.</p>
+                                </li>
+                            </ul>
+                            <div class="image">
+                                <img src="assets/images/solution/erb-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="solution-tab-cont finance">
+                            <ul class="list-unstyled ">
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p><b>CADS Finance Cloud</b> gồm nhiều phân hệ: Kế toán vốn bằng tiền, Phải thu, Phải trả, Tồn kho, Tài sản ccdc, Giá thành, Kế toán tổng hợp, Báo cáo tài chính & quản trị.</p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Tự động hóa các quy trình kế toán, giảm thiểu thời gian nhập liệu và xử lý sổ sách. Cung cấp cái nhìn tổng quan về tình hình tài chính, hỗ trợ ra quyết định nhanh chóng và chính xác.</p>
+                                </li>
+                                <li>
+                                    <img src="assets/images/operate/operate-check.png">
+                                    <p>Đảm bảo tuân thủ các quy định và chuẩn mực kế toán, bảo mật dữ liệu tài chính.</p>
+                                </li>
+                            </ul>
+                            <div class="image">
+                                <img src="assets/images/solution/finance-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="solution-video">
+        <video width="100%" autoplay muted loop>
+            <source src="assets/images/solution/solution-video.mp4" type="video/mp4">
+      
+          </video>
+    </div>
+    <div class="route">
+        <div class="container-cads">
+            <div class="subsystem-title-up operate-title-up mt-0">
+                Lộ trình chuyển đổi số
+            </div>
+            <div class="subsystem-intro operate-intro">
+                Giúp doanh nghiệp phát triển mạnh mẽ và bền vững trong kỷ nguyên số
+            </div>
+            <div class="route-list">
+                <div class="route-item">
+                    <div class="route-item-wrap">
+                        <div class="route-sharp">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1188 976">
+                                <path transform="translate(0)" d="m0 0 10 1 55 16 35 10 44 13 43 13 54 16 179 53 55 16 89 26 21 6 5 1h17l53-15 33-10 52-15 61-18 61-18 43-13 65-19 50-15 31-9 40-12 63-18 25-7 4-1v803l-16 5-59 17-51 15-50 15-47 14-39 12-56 16-57 17-45 13-39 12-55 16-57 17-13 3h-10l-30-8-47-14-40-12-41-12-40-12-52-15-94-28-30-9-59-17-50-15-31-9-36-11-22-6-22-5z" fill=""/>
+                            </svg>
+                            <img src="assets/images/route/icon-1.png">
+                        </div>
+                        <div class="route-arrow">
+                            <img src="assets/images/route/arrow.png" alt="">
+                        </div>
+                        <div class="route-meta">
+                            <div class="route-number">01</div>
+                            <div class="route-title">
+                                Lựa chọn Quy trình số hoá
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-item">
+                    <div class="route-item-wrap">
+                        <div class="route-sharp">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1188 976">
+                                <path transform="translate(0)" d="m0 0 10 1 55 16 35 10 44 13 43 13 54 16 179 53 55 16 89 26 21 6 5 1h17l53-15 33-10 52-15 61-18 61-18 43-13 65-19 50-15 31-9 40-12 63-18 25-7 4-1v803l-16 5-59 17-51 15-50 15-47 14-39 12-56 16-57 17-45 13-39 12-55 16-57 17-13 3h-10l-30-8-47-14-40-12-41-12-40-12-52-15-94-28-30-9-59-17-50-15-31-9-36-11-22-6-22-5z" fill=""/>
+                            </svg>
+                            <img src="assets/images/route/icon-2.png">
+                        </div>
+                        <div class="route-arrow">
+                            <img src="assets/images/route/arrow.png" alt="">
+                        </div>
+                        <div class="route-meta">
+                            <div class="route-number">02</div>
+                            <div class="route-title">
+                                PoC trải nghiệm miễn phí
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-item">
+                    <div class="route-item-wrap">
+                        <div class="route-sharp">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1188 976">
+                                <path transform="translate(0)" d="m0 0 10 1 55 16 35 10 44 13 43 13 54 16 179 53 55 16 89 26 21 6 5 1h17l53-15 33-10 52-15 61-18 61-18 43-13 65-19 50-15 31-9 40-12 63-18 25-7 4-1v803l-16 5-59 17-51 15-50 15-47 14-39 12-56 16-57 17-45 13-39 12-55 16-57 17-13 3h-10l-30-8-47-14-40-12-41-12-40-12-52-15-94-28-30-9-59-17-50-15-31-9-36-11-22-6-22-5z" fill=""/>
+                            </svg>
+                            <img src="assets/images/route/icon-3.png">
+                        </div>
+                        <div class="route-arrow">
+                            <img src="assets/images/route/arrow.png" alt="">
+                        </div>
+                        <div class="route-meta">
+                            <div class="route-number">03</div>
+                            <div class="route-title">
+                                Đánh giá đáp ứng và lập kế hoạch triển khai
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-item">
+                    <div class="route-item-wrap">
+                        <div class="route-sharp">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1188 976">
+                                <path transform="translate(0)" d="m0 0 10 1 55 16 35 10 44 13 43 13 54 16 179 53 55 16 89 26 21 6 5 1h17l53-15 33-10 52-15 61-18 61-18 43-13 65-19 50-15 31-9 40-12 63-18 25-7 4-1v803l-16 5-59 17-51 15-50 15-47 14-39 12-56 16-57 17-45 13-39 12-55 16-57 17-13 3h-10l-30-8-47-14-40-12-41-12-40-12-52-15-94-28-30-9-59-17-50-15-31-9-36-11-22-6-22-5z" fill=""/>
+                            </svg>
+                            <img src="assets/images/route/icon-4.png">
+                        </div>
+                        <div class="route-arrow">
+                            <img src="assets/images/route/arrow.png" alt="">
+                        </div>
+                        <div class="route-meta">
+                            <div class="route-number">04</div>
+                            <div class="route-title">
+                                Ký kết hợp đồng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-item">
+                    <div class="route-item-wrap">
+                        <div class="route-sharp">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1188 976">
+                                <path transform="translate(0)" d="m0 0 10 1 55 16 35 10 44 13 43 13 54 16 179 53 55 16 89 26 21 6 5 1h17l53-15 33-10 52-15 61-18 61-18 43-13 65-19 50-15 31-9 40-12 63-18 25-7 4-1v803l-16 5-59 17-51 15-50 15-47 14-39 12-56 16-57 17-45 13-39 12-55 16-57 17-13 3h-10l-30-8-47-14-40-12-41-12-40-12-52-15-94-28-30-9-59-17-50-15-31-9-36-11-22-6-22-5z" fill=""/>
+                            </svg>
+                            <img src="assets/images/route/icon-5.png">
+                        </div>
+                        <div class="route-arrow">
+                            <img src="assets/images/route/arrow.png" alt="">
+                        </div>
+                        <div class="route-meta">
+                            <div class="route-number">05</div>
+                            <div class="route-title">
+                                Đào tạo sử dụng GO LIVE
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-item">
+                    <div class="route-item-wrap">
+                        <div class="route-sharp">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1188 976">
+                                <path transform="translate(0)" d="m0 0 10 1 55 16 35 10 44 13 43 13 54 16 179 53 55 16 89 26 21 6 5 1h17l53-15 33-10 52-15 61-18 61-18 43-13 65-19 50-15 31-9 40-12 63-18 25-7 4-1v803l-16 5-59 17-51 15-50 15-47 14-39 12-56 16-57 17-45 13-39 12-55 16-57 17-13 3h-10l-30-8-47-14-40-12-41-12-40-12-52-15-94-28-30-9-59-17-50-15-31-9-36-11-22-6-22-5z" fill=""/>
+                            </svg>
+                            <img src="assets/images/route/icon-6.png">
+                        </div>
+                        <div class="route-arrow">
+                            <img src="assets/images/route/arrow.png" alt="">
+                        </div>
+                        <div class="route-meta">
+                            <div class="route-number">06</div>
+                            <div class="route-title">
+                                Tối ưu, Hiệu quả & Đồng hành
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-item">
+                    <div class="route-item-wrap">
+                        <div class="route-sharp">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1188 976">
+                                <path transform="translate(0)" d="m0 0 10 1 55 16 35 10 44 13 43 13 54 16 179 53 55 16 89 26 21 6 5 1h17l53-15 33-10 52-15 61-18 61-18 43-13 65-19 50-15 31-9 40-12 63-18 25-7 4-1v803l-16 5-59 17-51 15-50 15-47 14-39 12-56 16-57 17-45 13-39 12-55 16-57 17-13 3h-10l-30-8-47-14-40-12-41-12-40-12-52-15-94-28-30-9-59-17-50-15-31-9-36-11-22-6-22-5z" fill=""/>
+                            </svg>
+                            <img src="assets/images/route/icon-7.png">
+                        </div>
+                        <div class="route-arrow">
+                            <img src="assets/images/route/arrow.png" alt="">
+                        </div>
+                        <div class="route-meta">
+                            <div class="route-number">07</div>
+                            <div class="route-title">
+                                Dịch vụ hỗ trợ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="time-line">
+        <div class="container-cads">
+            <div class="subsystem-title-up operate-title-up">
+                Cột mốc phát triển sản phẩm
+            </div>
+            <div class="time-line-list">
+                <div class="time-line-item">
+                    <div class="time-line-label">
+                        Ra mắt Phần mềm Kế toán <br>
+                        <span>CADS Accounting</span>
+
+                    </div>
+                    <div class="time-line-dashed"></div>
+                    <div class="time-line-year"><span>1997</span></div>
+                    <div class="time-line-icon">
+                        <img src="assets/images/time-line/time-line-ico-1.png">
+                    </div>
+                </div>
+                <div class="time-line-item">
+                    <div class="time-line-label">
+                        Ra mắt Phần mềm Quản trị <br> Doanh nghiệp <span>CADS ERP</span>
+
+                    </div>
+                    <div class="time-line-dashed"></div>
+                    <div class="time-line-year"><span>2009</span></div>
+                    <div class="time-line-icon">
+                        <img src="assets/images/time-line/time-line-ico-2.png">
+                    </div>
+                </div>
+                <div class="time-line-item">
+                    <div class="time-line-label">
+                        Phát hành Phần mềm Kế toán <span>CADS Finance </span> <br> Quản lý Kho & Phân phối Dược phẩm <span>CADS SCM</span>
+
+                    </div>
+                    <div class="time-line-dashed"></div>
+                    <div class="time-line-year"><span>2012</span></div>
+                    <div class="time-line-icon">
+                        <img src="assets/images/time-line/time-line-ico-3.png">
+                    </div>
+                </div>
+                <div class="time-line-item">
+                    <div class="time-line-label">
+                        Xây dựng Phần mềm <br> Văn phòng Điện tử <span>CADS E-Office</span>
+                    </div>
+                    <div class="time-line-dashed"></div>
+                    <div class="time-line-year"><span>2015</span></div>
+                    <div class="time-line-icon">
+                        <img src="assets/images/time-line/time-line-ico-4.png">
+                    </div>
+                </div>
+                <div class="time-line-item">
+                    <div class="time-line-label">
+                        Nền tảng <span>1Business.vn</span> <br> Hợp nhất ERP & E-Office
+
+                    </div>
+                    <div class="time-line-dashed"></div>
+                    <div class="time-line-year"><span>2023</span></div>
+                    <div class="time-line-icon">
+                        <img src="assets/images/time-line/time-line-ico-5.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="customer-story">
+        <div class="container-cads">
+            <div class="customer-story-title">
+                Câu chuyện của khách hàng
+            </div>
+            <div class="home-blog">
+                <div class="home-blog-list">
+                    <div class="home-blog-item">
+                        <div class="home-blog-item-content">
+                            <div class="home-blog-item-image">
+                                <img src="assets/images/customer-story/DinhAn.jpg" alt="news-1">
+                            </div>
+                            <div class="home-blog-meta">
+                                <a href="https://cads.com.vn/vi/cads-dong-hanh-cung-tap-doan-dinh-an-trong-hanh-trinh-chuyen-doi-so-nws170.html" target="_blank" class="title">
+								CADS Chuyển đổi số thành công tại Tập đoàn Định An
+							</a>
+                                <div class="date">
+                                    <i class="fa-light fa-calendar-clock"></i>
+                                    <span>07/08/2024</span>
+                                </div>
+                                <a href="https://cads.com.vn/vi/cads-dong-hanh-cung-tap-doan-dinh-an-trong-hanh-trinh-chuyen-doi-so-nws170.html" target="_blank" class="summary">
+								Ngày 07/08/20224 sau 4 tháng vận hành thực tế, Công ty phần mềm CADS và Tập đoàn Định An đã làm lễ bàn giao nền tảng Văn phòng điện tử 1Business ...
+							</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-blog-item">
+                        <div class="home-blog-item-content">
+                            <div class="home-blog-item-image">
+                                <img src="assets/images/customer-story/CADS_giaiSaoSang.jpg" alt="news-1">
+                            </div>
+                            <div class="home-blog-meta">
+                                <a href="https://cads.com.vn/vi/cads-nhan-giai-thuong-sao-sang-tai-hoi-nghi-chuyen-doi-so-quoc-gia-2024-nws157.html" target="_blank" class="title">
+								Công ty cổ phần Phần mềm CADS vinh dự nhận giải thưởng Sao Sáng
+							</a>
+                                <div class="date">
+                                    <i class="fa-light fa-calendar-clock"></i>
+                                    <span>23/05/2024</span>
+                                </div>
+                                <a href="https://cads.com.vn/vi/cads-nhan-giai-thuong-sao-sang-tai-hoi-nghi-chuyen-doi-so-quoc-gia-2024-nws157.html" target="_blank" class="summary">
+								CADS vinh dự nhận giải thưởng Sao Sáng cho “Giải pháp Chuyển đổi số toàn diện 1Business Hợp nhất Văn phòng điện tử và ERP Made in Vietnam được yêu thích”...
+							</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="home-blog-item">
+                        <div class="home-blog-item-content">
+                            <div class="home-blog-item-image">
+                                <img src="assets/images/customer-story/HPOilVietNam.jpg" alt="news-1">
+                            </div>
+                            <div class="home-blog-meta">
+                                <a href="https://cads.com.vn/vi/le-ky-ket-nghiem-thu-ban-giao-du-an-phan-mem-1business-tai-cong-ty-cp-tap-doan-hp-oil-viet-nam-nws156.html" target="_blank" class="title">
+								Lễ ký kết nghiệm thu, bàn giao dự án Phần mềm 1Business tại Công ty CP Tập đoàn HP Oil Việt Nam
+							</a>
+                                <div class="date">
+                                    <i class="fa-light fa-calendar-clock"></i>
+                                    <span>27/04/2024</span>
+                                </div>
+                                <a href="https://cads.com.vn/vi/le-ky-ket-nghiem-thu-ban-giao-du-an-phan-mem-1business-tai-cong-ty-cp-tap-doan-hp-oil-viet-nam-nws156.html" target="_blank" class="summary">
+								Ngày 27/04/2024 tại Gia Lai, Lễ bản bàn giao Golive Dự án phần mềm quản trị doanh nghiệp toàn diện 1Business tại Cty CP Tập Đoàn HP Oil Việt Nam đã long trọng được diễn ra...
+							</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="home-blog-item">
+	<div class="home-blog-item-content">
+		<div class="home-blog-item-image">
+			<img src="assets/images/customer-story/AstraZeneca.png" alt="news-1">
+		</div>
+		<div class="home-blog-meta">
+			<a href="https://cads.com.vn/vi/tap-doan-duoc-pham-astrazeneca-trien-khai-he-thong-quan-ly-phan-phoi-duoc-pham-cads-scm-nws143.html" target="_blank" class="title">
+				Tập đoàn Dược phẩm AstraZeneca triển khai hệ thống quản lý phân phối dược phẩm CADS SCM
+			</a>
+			<div class="date">
+				<i class="fa-light fa-calendar-clock"></i>
+				<span>30/01/2024</span>
+			</div>
+			<a href="https://cads.com.vn/vi/tap-doan-duoc-pham-astrazeneca-trien-khai-he-thong-quan-ly-phan-phoi-duoc-pham-cads-scm-nws143.html" target="_blank" class="summary">
+				Phần mềm quản lý kho CADS SCM theo chuẩn GSP, theo dõi hàng hoá dược phẩm theo số lô, hạn sử dụng, quản lý kho theo từng...
+			</a>
+		</div>
+	</div>
+</div>-->
+                    <!--<div class="home-blog-item">
+<div class="home-blog-item-content">
+	<div class="home-blog-item-image">
+		<img src="assets/images/customer-story/PhuongThanh.png" alt="news-3">
+	</div>
+	<div class="home-blog-meta">
+		<a href="https://cads.com.vn/vi/cong-ty-co-phan-dau-tu-va-xay-dung-giao-thong-phuong-thanh-dua-cong-nghe-so-vao-quan-ly-vat-tu-thiet-bi-nws142.html" target="_blank" class="title">
+			Công ty cổ phần Đầu tư và Xây dựng Giao thông Phương Thành đưa công nghệ số vào quản lý vật tư, thiết bị
+		</a>
+		<div class="date">
+			<i class="fa-light fa-calendar-clock"></i>
+			<span>31/01/2024</span>
+		</div>
+		<a href="https://cads.com.vn/vi/cong-ty-co-phan-dau-tu-va-xay-dung-giao-thong-phuong-thanh-dua-cong-nghe-so-vao-quan-ly-vat-tu-thiet-bi-nws142.html" target="_blank" class="summary">
+			Số hoá quy trình quản lý vật tư, thiết bị giúp doanh nghiệp giảm chi phí và tăng hiệu suất công việc…
+		</a>
+	</div>
+</div>-->
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="customer-slide">
+			<div class="customer-slide-content">
+
+				<div class="swiper customer-slider">
+					<div class="swiper-wrapper">
+						<div class="customer-slider-item swiper-slide">
+							<div class="left">
+								<div class="video">
+									<div class="video-bg">
+										<img src="assets/images/customer-story/video-bg.png">
+									</div>
+
+									<a href="#video_pop" class="btn-play video-btn" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/Zu6yAHFwbOU?si=mphiZ6Te_7zs7E9Q">
+										<i class="fa-brands fa-youtube"></i>
+									</a>
+								</div>
+								<div class="customer-avata">
+									<img src="assets/images/customer-story/customer-user.png">
+								</div>
+							</div>
+							<div class="right">
+								<div class="opinion">
+									<div class="quote">
+										<img src="assets/images/customer-story/quote.png">
+									</div>
+									<div class="content">
+										<p class="text">
+											Với phương thức cung cấp dịch vụ chuyên nghiệp, các cán bộ có trình độ chuyên môn tốt, tinh thần trách nhiệm cao Phần mềm kế toán CADS Finance của Với phương thức cung cấp dịch vụ chuyên nghiệp, các cán bộ có trình độ chuyên môn tốt, tinh thần trách nhiệm
+											cao Phần mềm kế toán CADS Finance của...
+										</p>
+										<div class="circle-line">
+											<svg xmlns="http://www.w3.org/2000/svg" width="109" height="5" viewBox="0 0 109 5" fill="none">
+												<rect y="2" width="109" height="1" fill="#DC271F"/>
+												<circle cx="2.5" cy="2.5" r="2.5" fill="#DC271F"/>
+											  </svg>
+										</div>
+										<div class="customer-info">
+											<div class="name">
+												Ông Vũ Tiến Trung
+											</div>
+											<div class="position">
+												Chủ tịch HĐTV kiêm Tổng Giám đốc Cty TNHH Kiểm Toán - tư vấn thuế (ATC)
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="customer-slider-item swiper-slide">
+							<div class="left">
+								<div class="video">
+									<div class="video-bg">
+										<img src="assets/images/customer-story/video-bg.png">
+									</div>
+
+									<a href="#video_pop" class="btn-play video-btn" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/Zu6yAHFwbOU?si=mphiZ6Te_7zs7E9Q">
+										<i class="fa-brands fa-youtube"></i>
+									</a>
+								</div>
+								<div class="customer-avata">
+									<img src="assets/images/customer-story/customer-user.png">
+								</div>
+							</div>
+							<div class="right">
+								<div class="opinion">
+									<div class="quote">
+										<img src="assets/images/customer-story/quote.png">
+									</div>
+									<div class="content">
+										<p class="text">
+											Với phương thức cung cấp dịch vụ chuyên nghiệp, các cán bộ có trình độ chuyên môn tốt, tinh thần trách nhiệm cao Phần mềm kế toán CADS Finance của Với phương thức cung cấp dịch vụ chuyên nghiệp, các cán bộ có trình độ chuyên môn tốt, tinh thần trách nhiệm
+											cao Phần mềm kế toán CADS Finance của...
+										</p>
+										<div class="circle-line">
+											<svg xmlns="http://www.w3.org/2000/svg" width="109" height="5" viewBox="0 0 109 5" fill="none">
+												<rect y="2" width="109" height="1" fill="#DC271F"/>
+												<circle cx="2.5" cy="2.5" r="2.5" fill="#DC271F"/>
+											  </svg>
+										</div>
+										<div class="customer-info">
+											<div class="name">
+												Ông Vũ Tiến Trung
+											</div>
+											<div class="position">
+												Chủ tịch HĐTV kiêm Tổng Giám đốc Cty TNHH Kiểm Toán - tư vấn thuế (ATC)
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="customer-slider-item swiper-slide">
+							<div class="left">
+								<div class="video">
+									<div class="video-bg">
+										<img src="assets/images/customer-story/video-bg.png">
+									</div>
+
+									<a href="#video_pop" class="btn-play video-btn" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/Zu6yAHFwbOU?si=mphiZ6Te_7zs7E9Q">
+										<i class="fa-brands fa-youtube"></i>
+									</a>
+								</div>
+								<div class="customer-avata">
+									<img src="assets/images/customer-story/customer-user.png">
+								</div>
+							</div>
+							<div class="right">
+								<div class="opinion">
+									<div class="quote">
+										<img src="assets/images/customer-story/quote.png">
+									</div>
+									<div class="content">
+										<p class="text">
+											Với phương thức cung cấp dịch vụ chuyên nghiệp, các cán bộ có trình độ chuyên môn tốt, tinh thần trách nhiệm cao Phần mềm kế toán CADS Finance của Với phương thức cung cấp dịch vụ chuyên nghiệp, các cán bộ có trình độ chuyên môn tốt, tinh thần trách nhiệm
+											cao Phần mềm kế toán CADS Finance của...
+										</p>
+										<div class="circle-line">
+											<svg xmlns="http://www.w3.org/2000/svg" width="109" height="5" viewBox="0 0 109 5" fill="none">
+												<rect y="2" width="109" height="1" fill="#DC271F"/>
+												<circle cx="2.5" cy="2.5" r="2.5" fill="#DC271F"/>
+											  </svg>
+										</div>
+										<div class="customer-info">
+											<div class="name">
+												Ông Vũ Tiến Trung
+											</div>
+											<div class="position">
+												Chủ tịch HĐTV kiêm Tổng Giám đốc Cty TNHH Kiểm Toán - tư vấn thuế (ATC)
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
+
+			</div>
+		</div>-->
+    </div>
+
+    <div class="our-customer">
+        <div class="container-cads">
+            <div class="our-customer-wrap">
+                <div class="our-customer-static">
+                    <div class="title">
+                        <p class="text-red title-up">Hơn <span class="fs-large">3.000</span></p>
+                        <p class="title-down">Khách Hàng đã lựa chọn 1Business</p>
+                    </div>
+                    <div class="intro">Để làm việc hiệu quả, sáng tạo và kết nối hơn</div>
+                </div>
+                <div class="our-customer-list">
+                    <div class="our-customer-item">
+                        <a href="https://sonhaiphong.com.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/son-hai-phong.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="http://pvpaint.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/SonDauKhiVietNam_PVN.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="our-customer-item">
+                        <a href="https://vpphongha.com.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/VanPhongPhamHongHa.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://quelamgroup.com.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/TapDoan_QueLam.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://havicovn.com/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/Havico.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://phuongthanhtranconsin.com/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/PhuongThanh_tranconsin.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://cienco4.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/Cienco4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://idico.com.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/Idico.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://nagecco.com/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/Nagecco.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://constrexim1.com.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/Constrexim1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://astrazeneca.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/AstraZeneca.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://hapharco.com.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/Hapharco.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://phytopharma.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/PhytoPharma.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://saokimpharma.com/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/DuocPham_SaoKim.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://vinatranco.com.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/KhoVan_Vinatranco.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://onggiaika.com/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/OngGiaIka.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://trangantoys.com.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/TrangAn.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://vafapack.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/BaoBi_Vafaco_Vafapack.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://comtamcali.com/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/ComTam_Cali.png" alt="">
+                        </a>
+                    </div>
+                    <div class="our-customer-item">
+                        <a href="https://intaichinh.vn/" target="_blank" class="our-customer-box">
+                            <img src="assets/images/our-customer/InTaiChinh.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our-value">
+        <div class="our-value-content">
+            <div class="our-value-title">
+                <span class="text-red">Giá trị và nguyên tắc cốt lõi</span> của chúng tôi
+            </div>
+            <div class="our-value-list">
+                <div class="our-value-item">
+                    <div class="image">
+                        <img src="assets/images/our-value/hand-each.png">
+                    </div>
+                    <div class="title">
+                        Cam kết lâu dài
+                    </div>
+                    <div class="home-text">
+                        Với 27 năm kinh nghiệm trong phát triển phần mềm và chuyển đổi số, chúng tôi hiểu rõ những thách thức mà các doanh nghiệp đang gặp phải. Chúng tôi tự hào về khả năng cung cấp các giải pháp phần mềm thông minh và sáng tạo, nhằm thúc đẩy sự phát triển bền
+                        vững cho khách hàng. Cam kết của chúng tôi là đồng hành cùng bạn trong chuyển đổi số, tối ưu hóa quy trình và tăng hiệu suất làm việc, giúp bạn cạnh tranh trong thời đại số.
+                    </div>
+                </div>
+                <div class="our-value-item">
+                    <div class="image">
+                        <img src="assets/images/our-value/goal.png">
+                    </div>
+                    <div class="title">
+                        Nghiên cứu và phát triển
+                    </div>
+                    <div class="home-text">
+                        Sự đầu tư liên tục và mạnh mẽ vào nghiên cứu và phát triển (R&D) là chìa khóa giúp chúng tôi nâng cao chất lượng sản phẩm và dịch vụ. 1Business.vn cung cấp các ứng dụng công nghệ độc đáo, dễ sử dụng và hiệu suất cao, không ngừng mở rộng với các giải pháp
+                        mới cho nhu cầu đa dạng của doanh nghiệp. Mỗi ứng dụng mang lại hiệu quả cao và trải nghiệm sử dụng tuyệt vời, giúp nhân viên của bạn làm việc hiệu quả hơn.
+                    </div>
+
+                </div>
+                <div class="our-value-item">
+                    <div class="image">
+                        <img src="assets/images/our-value/service .png">
+                    </div>
+                    <div class="title">
+                        Khách hàng là trên hết
+                    </div>
+                    <div class="home-text">
+                        Khách hàng luôn là ưu tiên hàng đầu của chúng tôi. Dù doanh nghiệp của bạn có quy mô lớn hay nhỏ, chúng tôi cam kết cung cấp các giải pháp phần mềm chuyển đổi số thông minh và tiện ích, nhằm hỗ trợ sự phát triển bền vững của doanh nghiệp. Với tâm niệm
+                        rằng: “Hôm nay có thể làm gì để phục vụ khách hàng tốt hơn”, chúng tôi luôn sát cánh cùng bạn, hướng tới thành công.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-link">
+        <div class="app-link-content">
+            <div class="app-link-list">
+                <div class="title">
+                    Ứng dụng Cads đã có mặt trên:
+                </div>
+                <div class="link">
+                    <a href="#" class="item">
+                        <img src="assets/images/app-link/ios-link.png">
+                    </a>
+                    <a href="#" class="item">
+                        <img src="assets/images/app-link/microsoft-link.png">
+                    </a>
+                    <a href="#" class="item">
+                        <img src="assets/images/app-link/android-link.png">
+                    </a>
+                </div>
+                <div class="intro">
+                    Quản trị và Điều hành Doanh nghiệp Trực tuyến với <span class="text-red">1Business.vn</span>
+                </div>
+                <a href="#register" data-bs-toggle="modal" class="btn btn-banner">
+                    <span>Đăng ký Demo</span>
+                </a>
+            </div>
+            <div class="app-link-image">
+                <img src="assets/images/app-link/app-link-ing.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="contact-group">
+        <div class="container-cads">
+            <div class="contact-group-list">
+                <a href="tel:19001294" class="contact-group-item">
+                    <div class="icon">
+                        <img src="assets/images/contact-group/hotline.png">
+                    </div>
+                    <div class="title">1900 1294</div>
+                    <div class="home-text">
+                        Tổng đài hỗ trơ tư vấn giờ hành chính (8h00 -17h)
+                    </div>
+                </a>
+                <a href="tel:090 340 2799" class="contact-group-item">
+                    <div class="icon">
+                        <img src="assets/images/contact-group/mobile.png">
+                    </div>
+                    <div class="title">090 340 2799</div>
+                    <div class="home-text">
+                        Tư vấn sản phẩm live chat hỗ trợ nhanh và hiệu quả nhất
+                    </div>
+                </a>
+                <a href="#" class="contact-group-item">
+                    <div class="icon">
+                        <img src="assets/images/contact-group/facebook.png">
+                    </div>
+                    <div class="title">Facebook Fanpage</div>
+                    <div class="home-text">
+                        Phản hồi khách hàng nhanh chóng qua Facebook
+                    </div>
+                </a>
+                <a href="#" class="contact-group-item">
+                    <div class="icon">
+                        <img src="assets/images/contact-group/youtube.png">
+                    </div>
+                    <div class="title">Youtube Channel</div>
+                    <div class="home-text">
+                        Cập nhật trực quan cách sử dụng phần mềm 1Business.vn
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container-cads">
+
+            <div class="footer-wrap">
+                <div class="footer-address">
+                    <div class="logo-footer">
+                        <a href="#"><img src="assets/images/footer/logo-footer.png"></a>
+                    </div>
+                    <div class="label">
+                        Công ty Cổ phần Phần mềm CADS
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/footer/address-ico.png">
+                        </div>
+                        <div class="info">
+                            <div class="plate">Hà Nội</div>
+                            <p>
+                                <b>Địa chỉ:</b> Tòa nhà ICC, Số 1277 Giải Phóng, Quận Hoàng Mai
+                            </p>
+                            <p>
+                                <b>Tel:</b> (024) 3641 3449
+                            </p>
+                            <p>
+                                <b>Fax:</b> (84-024) 364 11279
+                            </p>
+                            <p>
+                                <b> E- mail:</b> info@cads.com.vn
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/footer/map-ico.png">
+                        </div>
+                        <div class="info">
+                            <div class="plate">TP. HCM</div>
+                            <p>
+                                <b>Địa chỉ:</b> 100 Nguyễn Xí, Phường 26, Quận Bình Thạnh
+                            </p>
+                            <p>
+                                <b>Tel:</b> (028) 3914 3786
+                            </p>
+                            <p>
+                                <b>Fax:</b> (84-024) 364 11279
+                            </p>
+                            <p>
+                                <b>E- mail:</b> info@cads.com.vn
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-box-link one">
+                    <div class="label">
+                        VỀ CADS
+                    </div>
+                    <div class="footer-list-link">
+                        <a href="https://cads.com.vn/vi/gioi-thieu.html" target="_blank">
+                            <span class="list-style"></span>
+                            <span>Giới thiệu CADS</span>
+                        </a>
+                        <a href="#">
+                            <span class="list-style"></span>
+                            <span>Báo giá</span>
+                        </a>
+                        <a href="https://cads.com.vn/vi/chinh-sach-bao-mat.html" target="_blank">
+                            <span class="list-style"></span>
+                            <span>Chính sách bảo mật </span>
+                        </a>
+                        <a href="https://cads.com.vn/vi/chuyen-doi-so-c6" target="_blank">
+                            <span class="list-style"></span>
+                            <span>Tin sản phẩm</span>
+                        </a>
+                        <!--
+						<a href="#">
+							<span class="list-style"></span>
+							<span>Khách hàng nói về CADS</span>
+						</a>
+                        -->
+                        <a href="https://cads.com.vn/vi/tim-hieu-ve-erp-c2" target="_blank">
+                            <span class="list-style"></span>
+                            <span>Tìm hiểu về ERP</span>
+                        </a>
+                        <!--
+						<a href="#">
+							<span class="list-style"></span>
+							<span>CADS Finance 4.0 </span>
+						</a> 
+						<a href="#">
+							<span class="list-style"></span>
+							<span>Tiện ích</span>
+                          </a> -->
+                        <a href="#register" data-bs-toggle="modal">
+                            <span class="list-style"></span>
+                            <span>Liên hệ</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-box-link two">
+                    <div class="label">
+                        SẢN PHẨM
+                    </div>
+
+                    <div class="footer-list-link">
+                        <a href="#">
+                            <span class="list-style"></span>
+                            <span>CADS 1Business</span>
+                        </a>
+                        <a href="https://cads.com.vn/vi/cads-finance-online-cpw13" target="_blank">
+                            <span class="list-style"></span>
+                            <span>Cads Finance Online</span>
+                        </a>
+                        <a href="https://cads.com.vn/vi/cads-finance-cpw4" target="_blank">
+                            <span class="list-style"></span>
+                            <span>CADS Finance 4.5 </span>
+                        </a>
+                        <a href="https://cads.com.vn/vi/cads-business-cpw3" target="_blank">
+                            <span class="list-style"></span>
+                            <span>CADS Business</span>
+                        </a>
+                        <a href="https://cads.com.vn/vi/cads-sale-cpw8" target="_blank">
+                            <span class="list-style"></span>
+                            <span>CADS SALE</span>
+                        </a>
+                        <a href="https://cads.com.vn/vi/cads-erp-cpw5" target="_blank">
+                            <span class="list-style"></span>
+                            <span>CADS ERP</span>
+                        </a>
+                        <a href="https://cads.com.vn/vi/cads-mrp-cpw6" target="_blank">
+                            <span class="list-style"></span>
+                            <span>CADS MRP</span>
+                        </a>
+                        <a href="https://cads.com.vn/vi/cads-hrm-cpw7" target="_blank">
+                            <span class="list-style"></span>
+                            <span>CADS HRM</span>
+                        </a>
+                        <a href="https://cads.com.vn/vi/cads-scm-cpw9" target="_blank">
+                            <span class="list-style"></span>
+                            <span>CADS SCM</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <div class="label">
+                        Chia sẻ Facebook
+                    </div>
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0" nonce="SvHtEe5b"></script>
+                    <div class="facebook-link">
+                        <div class="fb-page" data-href="https://www.facebook.com/PhanMemCADS" data-tabs="timeline" data-width="1000" data-height="115" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/PhanMemCADS" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PhanMemCADS">Phần mềm CADS</a></blockquote>
+                        </div>
+                    </div>
+                    <div class="label video-label">
+                        Video
+                    </div>
+                    <div class="youtube-link">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Zu6yAHFwbOU?si=7MY5qSKGmYOXbny_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container-cads">
+            <div class="copyright-wrap">
+                <p>
+                    Copyright © 1997 - 2024 CADS Software JSC
+                </p>
+                <div class="image-list">
+                    <img src="assets/images/copyright/image-1.png">
+                    <img src="assets/images/copyright/bocongthuong.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- hotline -->
+    <div id="group-support-hotline">
+        <a class="effect-ring" target="_blank" href="https://zalo.me/4468428934782633908">
+            <img src="assets/images/icon-call-zalo.svg" alt="Zalo">
+        </a>
+        <a class="effect-ring" href="tel:0903402799">
+            <img src="assets/images/icon-call-phone.svg" alt="phone">
+        </a>
+    </div>
+
+
+    <!-- Modal dangky-->
+    <div class="modal fade cads-modal" id="register">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-600">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="modal-close" data-bs-dismiss="modal">
+						<i class="fa-light fa-times"></i>
+					</button>
+                </div>
+                <div class="modal-body">
+                    <div class="register-form">
+                        <div class="title">
+                            <!--Đăng ký nhận tư vấn <span class="text-blue">Sky</span><span class="text-yellow">viet</span>-->
+                            Đăng ký nhận tư vấn <span class="text-blue" style="color: #8C52FF;">1Business.vn</span>
+
+                        </div>
+                        <div class="form">
+                            <div class="container">
+
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="name">Họ và tên bạn<span class="text-red">*</span></label>
+                                            <input type="text" class="form-control" id="name" placeholder="Tên của bạn">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="product">Sản phẩm bạn quan tâm<span class="text-red">*</span></label>
+                                            <select class="form-select" id="product">
+												<option>-- Chọn giải pháp/ứng dụng bạn quan tâm nhất --</option>
+												<option>Công việc (Quản lý công việc, dự án, hồ sơ pháp lý, Đánh giá KPI)</option>
+												<option>Công văn (Quản lý công văn đi, công văn đến)</option>
+												<option>Quy trình nội bộ (Số hoá quy trình thanh toán, văn bản nội bộ)</option>
+												<option>Hợp đồng điện tử (Quản lý hợp đồng, Quy trình tạo hồ sơ và trình ký số điện tử)</option>
+												<option>Khách hàng (Hồ sơ khách hàng, giao dịch chăm sóc khách hàng)</option>
+												<option>Nhân sự (Nhân sự, Chấm công, tính lương, lịch làm việc, nghỉ phép online)</option>
+												<option>Quản lý thiết bị (Thiết bị, bảo trì, sửa chữa, nhật trình theo công trình, dự án, gói thầu)</option>
+												<option>Vật tư nhiên liệu (Quản lý nhập, xuất, tồn kho vật tư nhiên liệu theo công trình, dự án)</option>
+												<option>Kế toán (Tiền mặt, Tiền gửi, Vay, Phải thu, Phải trả, Tồn kho, Tài sản, Thuế, Giá thành…)</option>
+												<option>ERP (Kế toán, Mua hàng, Bán hàng, Kho, Kế hoạch SX, Giá thành, Tài sản, Nhân sự…)</option>
+												<option>App gọi hàng (App cho các nhà phân phối, đại lý và tích hợp Kế toán, Bán hàng, ERP)</option>
+												<option>App chấm công (Chấm công định vị, QrCode, nhận dạng khuôn mặt)</option>
+
+											</select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Số điện thoại<span class="text-red">*</span></label>
+                                            <input type="text" class="form-control" id="phone" placeholder="Số điện thoại của bạn">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="name">Email của bạn<span class="text-red">*</span></label>
+                                            <input type="email" class="form-control" id="name" placeholder="Email của bạn">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="company">Tên công ty của bạn<span class="text-red">*</span></label>
+                                            <input type="email" class="form-control" id="company" placeholder="Tên công ty của bạn">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="position">Vị trí công việc<span class="text-red">*</span></label>
+                                            <select class="form-select" id="position">
+												<option>-- Lựa chọn vị trí công việc --</option>
+												<option>CEO / Founder / Chủ tịch </option>
+												<option>Giám đốc (CFO, CTO, Giám đốc nhân sự, VP)</option>
+												<option>Quản lý (manager)</option>
+												<option>Nhân viên (staff)</option>
+												<option>Vị trí khác (other)</option>
+
+											</select>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="city">Tỉnh/Thành phố<span class="text-red">*</span></label>
+                                            <select class="form-select" id="city">
+												<option>-- Tỉnh/Thành phố --</option>
+												<option>Khu vực miền Bắc </option>
+												<option>GKhu vực miền Nam</option>
+												<option>Khu vực miền Trung</option>
+
+											</select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="scale">Quy mô nhân sự <span class="text-red">*</span></label>
+                                            <select class="form-select" id="scale">
+												<option>-- Quy mô nhân sự  --</option>
+												<option>1 – 15 nhân sự</option>
+												<option>16 – 30 nhân sự</option>
+												<option>31 – 60 nhân sự</option>
+												<option>61 – 200 nhân sự</option>
+												<option>201 – 500 nhân sự </option>
+												<option>501 – 1000 nhân sự</option>
+												<option>Hơn 1000 nhân sự</option>
+
+											</select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-register">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal play video -->
+    <div class="modal fade  video-modal" id="video_pop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-800 modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+
+                <div class="modal-body">
+
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- go top -->
+
+
+    <a id="button" class="show">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+
+
+
+</body>
+
+<!-- JS -->
+<script src="assets/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="assets/swiper-slide-11.0.5/swiper-bundle.min.js"></script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/customs.js"></script>
+
+</html>

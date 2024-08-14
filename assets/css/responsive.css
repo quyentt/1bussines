@@ -704,6 +704,7 @@
 @media (max-width: 450px) {
   .route-sharp {
     width: 135px;
+    height: 110px;
   }
   .route-arrow {
     display: none;

@@ -130,6 +130,11 @@
   .route-sharp {
     width: 180px;
     flex-shrink: 0;
+    height: 148px;
+  }
+  .route-sharp svg {
+    width: 100%;
+    height: 100%;
   }
   .route-item:nth-child(even) .route-sharp svg {
     transform: rotate(0);

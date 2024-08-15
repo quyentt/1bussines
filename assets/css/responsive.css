@@ -66,9 +66,36 @@
   .subsystem-item {
     width: 20%;
   }
+  .banner-page-1 {
+    height: calc(100vh - 81px);
+    background-size: cover;
+  }
 }
 
 @media (max-width: 1024px) {
+  .banner-page-1 {
+    height: auto;
+    background-size: cover;
+  }
+  .banner-page-1-cont {
+    flex-wrap: wrap;
+  }
+  .banner-page-1-cont-text {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding-top: 80px;
+  }
+  .banner-page-1-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 80px;
+  }
+  .banner-page-1-image img {
+    width: 500px;
+  }
   .time-line-item:nth-child(even) {
     flex-direction: row-reverse;
     justify-content: start;
@@ -565,6 +592,16 @@
 }
 
 @media (max-width: 600px) {
+  .banner-page-1-btn {
+    font-size: 20px;
+    padding: 20px 50px;
+  }
+  .banner-page-1-title-up {
+    font-size: 30px;
+  }
+  .banner-page-1-title-down {
+    font-size: 24px;
+  }
   .banner.banner-2 {
     background-size: 203%;
   }
